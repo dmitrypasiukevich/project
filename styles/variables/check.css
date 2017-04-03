@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Ubuntu');
+body {
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+body h1 {
+  margin: 0;
+  font-size: 30px;
+}
+body form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px 20px 40px;
+  border: 10px solid ivory;
+  flex: 0 0 500px;
+}
+body form input:required + label::after {
+  content: '*';
+  color: red;
+}
+body form .form {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+body form .form #save {
+  width: 120px;
+  background-color: white;
+  cursor: pointer;
+  height: 45px;
+  text-align: center;
+}
+body form .form #save:hover {
+  background-color: blue;
+  color: white;
+}
+body form .form #cancel {
+  color: black;
+  font-size: 14px;
+  text-align: center;
+  border-style: outset;
+  cursor: pointer;
+  font-family: 'Lobster', arial, serif;
+}
+body form .form #cancel a {
+  display: block;
+  padding: 12px 10px 8px 10px;
+  text-decoration: none;
+  width: 100px;
+  height: 19px;
+}
+body form .form #cancel a:hover {
+  color: white;
+  background-color: blue;
+}
+body form .form #address {
+  resize: vertical;
+}
+body form .form #address:focus,
+body form .form #country:focus {
+  outline: none;
+  border-bottom: 2px solid blue;
+}
+body form .form textarea:required + label::after {
+  content: '*';
+  color: red;
+}
+body form .form #country,
+body form .form #address {
+  border-color: gainsboro;
+}
+body form .form input:focus {
+  outline: none;
+  border-bottom: 2px solid blue;
+}
+body form .form input,
+body form .form textarea,
+body form .form select,
+body form .form fieldset {
+  order: 1;
+  border-width: 0 0 2px 0;
+}
+body form .form label {
+  flex: 0 0 120px;
+}
+body form .form input,
+body form .form select,
+body form .form textarea {
+  flex-grow: 1;
+}
+body form .form label {
+  text-align: end;
+  padding: 0 20px 0 0;
+}
+body form .form fieldset {
+  width: 335px;
+  border: 2px solid gainsboro;
+}
+body form #fieldset {
+  flex-grow: 1;
+  justify-content: flex-end;
+}

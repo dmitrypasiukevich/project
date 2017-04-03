@@ -1,0 +1,15 @@
+.content .contacts h1 {
+  margin: 0 0 10px 40px;
+  font-size: 25px;
+}
+.content .contacts p {
+  text-indent: 20px;
+  margin: 0 20px;
+  line-height: 30px;
+}
+.content .contacts p span {
+  font-weight: bold;
+}
+.content .contacts iframe {
+  margin: 20px 40px;
+}

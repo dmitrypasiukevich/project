@@ -1,0 +1,118 @@
+@import "color";
+@import "font";
+
+body {
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 40px 20px 40px;
+      border: 10px solid @MainFon;
+      flex: 0 0 500px;
+      input:required + label::after {
+        content: '*';
+        color: @star;
+      }
+      .form {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0 10px 0;
+        #save {
+          width: 120px;
+          background-color: white;
+          cursor: pointer;
+          height: 45px;
+          text-align: center;
+          &:hover {
+            background-color: blue;
+            color: white;
+          }
+        }
+        #cancel {
+          color: black;
+          font-size: 14px;
+          text-align: center;
+          border-style: outset;
+          cursor: pointer;
+          font-family: 'Lobster', arial, serif;
+          & a {
+            display: block;
+            padding: 12px 10px 8px 10px;
+            text-decoration: none;
+            width: 100px;
+            height: 19px;
+            &:hover {
+              color: white;
+              background-color: blue;
+            }
+          }
+        }
+        #address {
+          resize: vertical;
+        }
+        #address:focus, #country:focus {
+          outline: none;
+          border-bottom: 2px solid blue;
+        }
+        textarea:required + label::after {
+          content: '*';
+          color: @star;
+        }
+        #country, #address {
+          border-color: gainsboro;
+        }
+        input:focus {
+          outline: none;
+          border-bottom: 2px solid blue;
+        }
+        input, textarea, select, fieldset {
+          order: 1;
+          border-width: 0 0 2px 0;
+        }
+        label {
+          flex: 0 0 120px;
+        }
+        input, select, textarea {
+          flex-grow: 1;
+        }
+        label {
+          text-align: end;
+          padding: 0 20px 0 0;
+        }
+        fieldset {
+          width: 335px;
+          border: 2px solid gainsboro;
+        }
+      }
+      #fieldset {
+        flex-grow: 1;
+        justify-content: flex-end;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

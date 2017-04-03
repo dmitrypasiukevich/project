@@ -1,0 +1,259 @@
+@import "color";
+@import "font";
+body {
+  margin: 0;
+  padding: 0;
+  background-color: @MainFon;
+  .main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 1300px;
+    margin: auto;
+    .header {
+      padding: 10px;
+      display: flex;
+      flex: 0 0 20px;
+      justify-content: space-between;
+      background-color: black;
+      .nav {
+        flex: 0 0 400px;
+        ul {
+          padding: 0;
+          margin: 0;
+          & li {
+            list-style: none;
+            float: left;
+            &:hover {
+              text-decoration: underline;
+            }
+            & a {
+              text-decoration: none;
+              display: block;
+              padding: 0 10px 0 10px;
+              color: @TextColor;
+            }
+          }
+        }
+      }
+      .reg {
+        flex: 0 0 225px;
+        display: inline-block;
+        text-align: end;
+        color: @TextColor;
+        padding: 0 10px 0 0;
+        a {
+          color: @TextColor;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .banner {
+      display: flex;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 8px -2px rgba(0,0,0,0.15);
+      .log {
+        flex: 0 0 190px;
+        background: url(../logos/dd.png) no-repeat;
+        background-color: transparent;
+      }
+      .inform {
+        flex: 1 0 600px;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        font-size: @inform;
+        .phone {
+          flex: 1 0 190px;
+          margin: 10px;
+          padding: 10px 0 10px 60px;
+          text-align: left;
+          position: relative;
+          img {
+            opacity: 0.1;
+            position: absolute;
+            top: 14px;
+            right: -1px;
+          }
+          span {
+            position: relative;
+            right: -25px;
+          }
+          .velcom {
+            background: url(../logos/velcom.png) no-repeat;
+          }
+          .mts {
+            background: url(../logos/mts.png) no-repeat;
+            background-position: left -1px;
+          }
+          .life {
+            background: url(../logos/life.png) no-repeat;
+            background-position: left 1px bottom 3px;
+          }
+          .telephone {
+            background: url(../logos/phone.png) no-repeat;
+          }
+          .mail {
+            background: url(../logos/mail.png) no-repeat;
+          }
+        }
+        .address {
+          flex: 1 0 220px;
+          border-left: 1px solid black;
+          border-right: 1px solid black;
+          margin: 10px;
+          padding: 10px 0 10px 40px;
+          position: relative;
+          text-align: left;
+          img {
+            opacity: 0.1;
+            position: absolute;
+            top: 14px;
+            right: 40px;
+          }
+        }
+        .time {
+          padding: 25px 0 10px 10px;
+          margin: 10px;
+          flex: 1 0 190px;
+          text-align: left;
+          position: relative;
+          .workdays {
+            color: green;
+          }
+          .saturday {
+            color: orange;
+          }
+          .sunday {
+            color: red;
+          }
+          .pict {
+            opacity: 0.1;
+            position: absolute;
+            top: 10px;
+            right: 40px;
+          }
+        }
+      }
+    }
+    .content {
+      flex-grow: 1;
+      display: flex;
+      margin: 20px;
+      background-color: @MainFon;
+      .navigator {
+        .menu {
+          flex: 0 0 250px;
+          margin: 0 0 0 20px;
+        }
+        ul {
+          margin: 0;
+          padding: 0 2px 0 3px;
+        }
+        ul.menu {
+          background-color: @fontColor;
+          width: 200px;
+          li {
+            background-color: @fontColor;
+            border-bottom: 1px solid @TextColor;
+            list-style: none;
+            height: 30px;
+            ul li {
+              height: 30px;
+              width: 200px;
+            }
+            &:hover {
+              background-color: hotpink;
+              position: relative;
+              ul li ul {
+                position: absolute;
+              }
+            }
+            &:hover > ul {
+              display: block;
+              position: absolute;
+              left: 200px;
+              top: 0;
+            }
+            a {
+              text-decoration: none;
+              display: block;
+              padding: 5px 5px 5px 15px;
+              color: white;
+            }
+            ul {
+              display: none;
+              width: 200px;
+            }
+          }
+        }
+      }
+      .product{
+        flex-grow: 1;
+        background-color: @MainFon;
+        .item {
+          display: none;
+          h1 {
+            font-size: 35px;
+            margin: 0 0 0 40px;
+          }
+          &:target {
+            display: block;
+          }
+          &:last-child {
+            display: block;
+          }
+          &:target ~.item {
+            display: none;
+          }
+        }
+        .model {
+          flex-grow: 1;
+          display: flex;
+          background-color: @TextColor;
+          margin: 20px;
+          height: 200px;
+          .fotografii{
+            flex: 0 0 150px;
+            width: 200px;
+          }
+          .description {
+            flex-grow: 1;
+          }
+          .prise {
+            flex: 0 0 150px;
+            padding: 60px 0 0 15px;
+            font-size: @prise;
+          }
+        }
+        .model div {
+          padding: 10px;
+          margin: 10px 0;
+          &:nth-child(2) {
+            border-left: 1px solid @fontColor;
+            border-right: 1px solid @fontColor;
+          }
+        }
+      }
+    }
+    .footer {
+      flex: 0 0 30px;
+      padding: 6px;
+      margin-top: 20px;
+      box-shadow: 0 -6px 8px -2px rgba(0,0,0,0.15);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

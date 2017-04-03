@@ -1,0 +1,59 @@
+.preview {
+  position: fixed;
+  top: 6vw;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: block;
+  text-align: center;
+  animation: photo 2s 1;
+}
+@keyframes photo {
+  from {
+    top: -60%;
+    left: 0;
+  }
+  to {
+    top: 6vw;
+    left: 0;
+  }
+}
+.content .employees h1 {
+  margin: 0 0 10px 40px;
+  font-size: 25px;
+}
+.content .employees #photoEmployees {
+  display: block;
+}
+.content .employees #photoEmployees h3 {
+  position: relative;
+  top: -8px;
+  left: 24px;
+  width: 100px;
+  margin: 0;
+}
+.content .employees #photoEmployees div {
+  line-height: 0.8;
+  display: inline-block;
+  width: 200px;
+}
+.content .employees #photoEmployees div img {
+  margin: 35px;
+}
+.content .employees #photoEmployees div span {
+  position: relative;
+  top: -33px;
+  left: 38px;
+}
+.content .employees #photoEmployees div .fi {
+  font-size: 10px;
+  font-weight: bold;
+}
+.content .employees #photoEmployees div .dol {
+  font-size: 10px;
+}
+.content .employees #photoEmployees div .post {
+  font-size: 10px;
+  color: #3333ff;
+}
